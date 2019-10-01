@@ -7,12 +7,12 @@
       {{ product.name }}
     </a>
   </h3>
-  <p *ngIf="product.description">
+  <p *ngIf="product.description ; else elseBlock">
     Description: {{ product.description }}
   </p>
-
+  <ng-template #elseBlock><p class="no" > Description coming ..</p></ng-template>
   <button (click)="share()">
     Share
   </button>
-
+<hr>
 </div>
